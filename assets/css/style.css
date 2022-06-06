@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+/*Todo*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.container-general{
+    background-color: aqua;
+    display: grid;
+    grid-template-areas: 
+    "logo filtro"
+    "navegador contenido"
+    "navegador contenido"
+    "pie paginas";
+    grid-template-columns: 1fr 82%;
+    grid-template-rows: 8% 41% 41% 10%;
+}
+/*Menu / Izquierda */
+
+.logo{
+    color: white;
+    font-size: 1.5rem;
+    background-color: #0091ea;
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.navegador{
+    background-color: #0091ea;
+    grid-area: navegador;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding-top: 20px;
+    
+    
+}
+.navegador li{
+    margin: 5px;
+    
+}
+.navegador li a{
+    color: white;
+    text-decoration: none;
+}
+
+footer{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0064b7;
+    grid-area: pie; 
+}
+
+footer p{
+    text-align: center;
+}
+
+
+
+/*Contenido /Derecha */
+
+
+.filter{
+    grid-area: filtro;
+    background-color:aliceblue;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.filter p{
+    margin-top: 2px;
+}
+select{
+    width: 95%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.contenido{
+    background-color: white;
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-left: 1px solid grey;
+    height: auto; 
+    width: auto;
+    padding: 20px;
+  
+}
+
+.card{
+    display: flex;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 220px;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    
+}
+
+.card img{
+    width: 200px;
+    padding: 10px;
+    
+}
+.card p{
+    margin: 5px;
+}
+.card button{
+    background-color: #0064b7;
+    color: white;
+    border: none;
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.paginas{
+    grid-area: paginas;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid grey ;
+}
+.paginas .num{
+    width: 24px;
+    height: 30px;
+}
+
+
+
+@media (max-width: 576px){
+
+    .container-general{
+        background-color: aqua;
+        display: grid;
+        grid-template-areas: 
+        "logo"
+        "filtro"
+        "contenido"
+        "paginas"
+        "pie"
+        "navegador";
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .contenido{
+
+        grid-area: contenido;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-left: 1px solid grey;
+        
+    }
+    
+    .logo{
+        height: 65.5px;        
+    }
+
+    .paginas{
+        padding-bottom: 20px;
+    }
+
+    
+}
